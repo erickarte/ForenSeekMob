@@ -1,18 +1,20 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { Provider as PaperProvider } from 'react-native-paper';
-import StackNavigator from './src/navigation/StackNavigator';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { Provider as PaperProvider } from "react-native-paper";
+import StackNavigator from "./src/navigation/StackNavigator";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function App() {
   return (
     <PaperProvider>
-      <NavigationContainer>
-        <StackNavigator />
-      </NavigationContainer>
+      <SafeAreaView style={{ flex: 1 }} edges={["bottom"]}>
+        <NavigationContainer>
+          <StackNavigator />
+        </NavigationContainer>
+      </SafeAreaView>
     </PaperProvider>
   );
 }
-
 
 /*
 import React from 'react';
